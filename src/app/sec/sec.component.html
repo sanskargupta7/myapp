@@ -1,0 +1,6 @@
+<ng-component></ng-component>
+<input type="text" name="pSearch" id="pSearch" [(ngModel)]="pSearch">
+    <ul>
+        <li class="d-flex my-3 px-2 py-2" *ngFor="let p of prods | searchPipe:pSearch; let i = index">{{p}}<button class="btn-primary" (click)="discard(i)">Discard</button></li>
+
+    </ul>
